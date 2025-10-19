@@ -1,5 +1,5 @@
 Name:           flood
-Version:        4.10.0
+Version:        4.11.0
 Release:        %autorelease
 Summary:        A modern web UI for various torrent clients with a Node.js backend and React frontend
 
