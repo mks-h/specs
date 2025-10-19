@@ -1,6 +1,6 @@
 Name:           flood
-Version:        4.9.5
-Release:        %autorelease -b 2
+Version:        4.10.0
+Release:        %autorelease
 Summary:        A modern web UI for various torrent clients with a Node.js backend and React frontend
 
 License:        GPL-3.0-only
