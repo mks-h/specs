@@ -1,6 +1,6 @@
 Name:           flood
 Version:        4.11.0
-Release:        %autorelease
+Release:        %autorelease -b 2
 Summary:        A modern web UI for various torrent clients with a Node.js backend and React frontend
 
 License:        GPL-3.0-only
@@ -13,6 +13,7 @@ ExclusiveArch:  %{nodejs_arches} nodejs
 
 BuildRequires:  systemd-rpm-macros
 Requires:       nodejs
+Recommends:     mediainfo
 
 %description
 Flood is a monitoring service for various torrent clients. It's a Node.js
@@ -49,6 +50,9 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %systemd_postun_with_restart flood@.service
 
 %changelog
+* Sat Dec 27 2025 Maksym Hazevych <mhazevych@mailbox.org> - 4.11.0-2
+- Specify weak dependency on mediainfo
+
 * Wed Jun 11 2025 Maksym Hazevych <mhazevych@proton.me> - 4.9.5-2
 - Include systemd service template
 
