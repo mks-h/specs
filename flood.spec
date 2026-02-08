@@ -1,6 +1,6 @@
 Name:           flood
-Version:        4.11.0
-Release:        %autorelease -b 2
+Version:        4.12.5
+Release:        %autorelease
 Summary:        A modern web UI for various torrent clients with a Node.js backend and React frontend
 
 License:        GPL-3.0-only
@@ -47,9 +47,12 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %systemd_preun flood@.service
 
 %postun
-%systemd_postun_with_restart flood@.service
+%systemd_postun_with_restart flood@*.service
 
 %changelog
+* Sun Feb 8 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.12.5-1
+- Fix systemd services restart on package update
+
 * Sat Dec 27 2025 Maksym Hazevych <mhazevych@mailbox.org> - 4.11.0-2
 - Specify weak dependency on mediainfo
 
