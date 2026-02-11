@@ -1,7 +1,7 @@
 Name:           flood
 Version:        4.12.5
 Release:        %autorelease
-Summary:        A modern web UI for various torrent clients with a Node.js backend and React frontend
+Summary:        A modern web UI for various torrent clients
 
 License:        GPL-3.0-only
 URL:            https://flood.js.org/
@@ -38,7 +38,7 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %files
 %{_datadir}/%{name}/
 %{_bindir}/%{name}
-%config %{_unitdir}/flood@.service
+%{_unitdir}/flood@.service
 
 %post
 %systemd_post flood@.service
