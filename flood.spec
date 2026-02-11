@@ -1,5 +1,5 @@
 Name:           flood
-Version:        4.12.5
+Version:        4.12.6
 Release:        %autorelease
 Summary:        A modern web UI for various torrent clients
 
@@ -50,6 +50,11 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %systemd_postun_with_restart flood@*.service
 
 %changelog
+* Wed Feb 11 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.12.6-1
+- Update package summary
+- Update IP geolocation database
+- Fix: relax the schema to allow unknown field and fix setting schema
+
 * Sun Feb 8 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.12.5-1
 - Fix systemd services not restarting on package update
 - Update dependencies
