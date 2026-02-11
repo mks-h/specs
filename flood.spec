@@ -51,13 +51,31 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 
 %changelog
 * Sun Feb 8 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.12.5-1
-- Fix systemd services restart on package update
+- Fix systemd services not restarting on package update
+- Update dependencies
+- rTorrent: ignore sequential download input when unsupported
+- rTorrent: preserve extra files in directory when moving
+- qBittorrent: set ETA to -1 when not downloading
+- Add OpenAPI support
 
 * Sat Dec 27 2025 Maksym Hazevych <mhazevych@mailbox.org> - 4.11.0-2
 - Specify weak dependency on mediainfo
+
+* Sun Oct 19 2025 Maksym Hazevych <mhazevych@mailbox.org> - 4.11.0-1
+- Show size for status filter
+- Fix: improve server startup message
+
+* Sun Oct 19 2025 Maksym Hazevych <mhazevych@mailbox.org> - 4.10.0-1
+- Add optional Last Activity column to torrent list
+- Add units of measure to throttle speeds
+- Show 2 decimal in size usage
+- Fix: LoadingOverlay sometimes does not hide after login/logout
+- Fix: log authentication failed reasons
+- Update translations
 
 * Wed Jun 11 2025 Maksym Hazevych <mhazevych@proton.me> - 4.9.5-2
 - Include systemd service template
 
 * Tue Jun 10 2025 Maksym Hazevych <mhazevych@proton.me> - 4.9.5-1
 - Initial package
+- Update translations
