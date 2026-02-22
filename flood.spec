@@ -1,5 +1,5 @@
 Name:           flood
-Version:        4.12.6
+Version:        4.13.0
 Release:        %autorelease
 Summary:        A modern web UI for various torrent clients
 
@@ -50,6 +50,14 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %systemd_postun_with_restart flood@*.service
 
 %changelog
+* Sun Feb 22 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.13.0-1
+- Support info hash as a magnet link
+- Support searching torrents by info hash
+- Fix API when no authentication is used
+- Fix sidebar toggle on desktop
+- Update some UI strings
+- Update IP geolocation database
+
 * Wed Feb 11 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.12.6-1
 - Update package summary
 - Update IP geolocation database
