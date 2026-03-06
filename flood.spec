@@ -1,6 +1,6 @@
 Name:           flood
 Version:        4.13.0
-Release:        2%dist
+Release:        2%{?dist}
 Summary:        A modern web UI for various torrent clients
 
 License:        GPL-3.0-only AND MIT AND ISC AND BSD-3-Clause AND Unlicense 0BSD
