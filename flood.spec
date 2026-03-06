@@ -1,6 +1,6 @@
 Name:           flood
 Version:        4.13.0
-Release:        %autorelease
+Release:        2%dist
 Summary:        A modern web UI for various torrent clients
 
 License:        GPL-3.0-only AND MIT AND ISC AND BSD-3-Clause AND Unlicense 0BSD
@@ -53,6 +53,9 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %systemd_postun_with_restart flood@*.service
 
 %changelog
+* Sat Mar 7 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.13.0-2
+- Include all required licensing information in the package
+
 * Sun Feb 22 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.13.0-1
 - Support info hash as a magnet link
 - Support searching torrents by info hash
