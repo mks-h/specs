@@ -22,7 +22,7 @@ service that communicates with your favorite torrent client and serves a decent
 web UI for administration.
 
 %prep
-%setup -q -b 0 -n package/
+%setup -q -n package/
 cp %{SOURCE2} .
 
 
