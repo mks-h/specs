@@ -39,6 +39,7 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %{_datadir}/%{name}/
 %{_bindir}/%{name}
 %{_unitdir}/flood@.service
+%license LICENSE
 
 %post
 %systemd_post flood@.service
