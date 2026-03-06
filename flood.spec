@@ -3,10 +3,11 @@ Version:        4.13.0
 Release:        %autorelease
 Summary:        A modern web UI for various torrent clients
 
-License:        GPL-3.0-only
+License:        GPL-3.0-only AND MIT AND ISC AND BSD-3-Clause AND Unlicense 0BSD
 URL:            https://flood.js.org/
 Source0:        https://registry.npmjs.org/%{name}/-/%{name}-%{version}.tgz
 Source1:        https://raw.githubusercontent.com/jesec/%{name}/refs/tags/v%{version}/distribution/shared/flood%40.service
+Source2:        %{name}-%{version}-bundled-licenses.txt
 
 BuildArch:      noarch
 ExclusiveArch:  %{nodejs_arches} nodejs
@@ -22,6 +23,7 @@ web UI for administration.
 
 %prep
 %setup -q -b 0 -n package/
+cp %{SOURCE2} .
 
 
 %build
@@ -39,7 +41,7 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %{_datadir}/%{name}/
 %{_bindir}/%{name}
 %{_unitdir}/flood@.service
-%license LICENSE
+%license LICENSE %{name}-%{version}-bundled-licenses.txt
 
 %post
 %systemd_post flood@.service
