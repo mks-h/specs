@@ -8,6 +8,7 @@ URL:            https://flood.js.org/
 Source0:        https://registry.npmjs.org/%{name}/-/%{name}-%{version}.tgz
 Source1:        https://raw.githubusercontent.com/jesec/%{name}/refs/tags/v%{version}/distribution/shared/flood%40.service
 Source2:        %{name}-%{version}-bundled-licenses.txt
+Source3:        %{name}-%{version}-bundled-provides.inc
 
 BuildArch:      noarch
 ExclusiveArch:  %{nodejs_arches} nodejs
@@ -15,6 +16,8 @@ ExclusiveArch:  %{nodejs_arches} nodejs
 BuildRequires:  systemd-rpm-macros
 Requires:       nodejs
 Recommends:     mediainfo
+
+%include %{SOURCE3}
 
 %description
 Flood is a monitoring service for various torrent clients. It's a Node.js
