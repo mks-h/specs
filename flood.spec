@@ -13,7 +13,7 @@ Source3:        %{name}-%{version}-bundled-provides.inc
 BuildArch:      noarch
 ExclusiveArch:  %{nodejs_arches} nodejs
 
-BuildRequires:  systemd-rpm-macros
+BuildRequires:  systemd-rpm-macros nodejs-devel
 Requires:       nodejs
 Recommends:     mediainfo
 
@@ -39,6 +39,7 @@ install -m 0755 -vD %{_builddir}/package/dist/index.js %{buildroot}/%{_bindir}/%
 install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 
 %check
+%{__nodejs} ./dist/ --version
 
 %files
 %{_datadir}/%{name}/
