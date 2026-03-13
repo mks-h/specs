@@ -13,7 +13,7 @@ Source3:        %{name}-%{version}-bundled-provides.inc
 BuildArch:      noarch
 ExclusiveArch:  %{nodejs_arches} nodejs
 
-BuildRequires:  systemd-rpm-macros nodejs-devel
+BuildRequires:  systemd-rpm-macros nodejs nodejs-devel
 Requires:       nodejs
 Recommends:     mediainfo
 
