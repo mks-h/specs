@@ -1,6 +1,6 @@
 Name:           flood
 Version:        4.13.0
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        A modern web UI for various torrent clients
 
 License:        GPL-3.0-only AND MIT AND ISC AND BSD-3-Clause AND Unlicense AND 0BSD
@@ -57,6 +57,9 @@ install -m 0644 -vD %{SOURCE1} %{buildroot}/%{_unitdir}/flood@.service
 %systemd_postun_with_restart flood@*.service
 
 %changelog
+* Fri Mar 13 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.13.0-6
+- Fix the package build requirements for Fedora 42 & 43
+
 * Fri Mar 13 2026 Maksym Hazevych <mhazevych@mailbox.org> - 4.13.0-5
 - Include information about the libraries provided in the package
 - Include a simple check if the package is built correctly
